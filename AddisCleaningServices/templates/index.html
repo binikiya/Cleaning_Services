@@ -9,7 +9,9 @@
         
         <link href="{% static 'css/style.css' %}" rel="stylesheet">
         <link href="{% static 'css/style-switcher.css' %}" rel="stylesheet">
-        <link href="{% static 'css/fontawesome.min.css' %}" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
     </head>
     <body>
         <!-- Page wrapper start -->
@@ -20,6 +22,9 @@
                     <div class="logo">
                         <a href="#">addis <span>cleaning service</span></a>
                     </div>
+                    <button type="button" class="nav-phone js-nav-phone">
+                        <i class="fa-solid fa-phone"></i> +251-936-******
+                    </button>
                     <button type="button" class="nav-toggler js-nav-toggler">
                         <span></span>
                     </button>
@@ -29,7 +34,6 @@
                             <li><a href="#about">about us</a></li>
                             <li><a href="#services">services</a></li>
                             <li><a href="#pricing">pricing</a></li>
-                            <li><a href="#testimonials">testimonials</a></li>
                             <li><a href="#contact">contact</a></li>
 
                             <li>
@@ -53,16 +57,55 @@
                     <div class="grid">
                         <div class="home-text">
                             <h1>The best cleaning service in Addis Ababa </h1>
-                            <p>click the button to call for free quote. And get </p>
+                            <p>Book your professional cleaner in sec. </p>
                             <div class="btn-wrap">
-                                <a href="#about" class="btn">know more</a>
+                                <div class="desc">
+                                    <i class="fa fa-calendar-days"></i>
+                                    <p>
+                                        1. book a cleaning
+                                        <span>{% lorem 20 w %}</span>
+                                    </p>
+                                </div>
+                                <div class="desc">
+                                    <i class="fa-solid fa-lock"></i>
+                                    <p>
+                                        2. confirm booking
+                                        <span>{% lorem 20 w %}</span>
+                                    </p>
+                                </div>
+                                <div class="desc">
+                                    <i class="fa-solid fa-house"></i>
+                                    <p>
+                                        3. we'll clean it
+                                        <span>{% lorem 20 w %}</span>
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div class="home-img">
-                            <div class="circle-wrap">
-                                <div class="circle"></div>
+                        <div class="home-form">
+                            <div class="form-wrap">
+                                <div class="form">
+                                    <form action="" method="post">
+                                        <p>book your cleaners</p>
+                                        <div class="input-box">
+                                            <input type="text" name="name" placeholder="Your Name" class="input-control" required />
+                                        </div>
+                                        <div class="input-box">
+                                            <input type="text" name="address" placeholder="Address" class="input-control" required />
+                                        </div>
+                                        <div class="input-box">
+                                            <input type="email" name="email" placeholder="Email" class="input-control" required />
+                                        </div>
+                                        <div class="input-box">
+                                            <input type="numeric" name="phone" placeholder="Phone" class="input-control" required />
+                                        </div>
+                                        <div class="btn-wrap">
+                                            <button type="button" class="btn">confirm booking</button>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
-                            <img src="{% static 'img/home-img.png' %}">
+                            <!-- <img src="{% static 'img/home-img.png' %}"> -->
                         </div>
                     </div>
                 </div>
@@ -75,9 +118,9 @@
                     <div class="grid">
                         <div class="about-img">
                             <div class="img-box">
-                                <img src="{% static 'img/2.jpeg' %}" alt="about">
+                                <img src="{% static 'img/about-img.png' %}" alt="about">
                                 <div class="box box-1">
-                                    <span>2.5k</span>
+                                    <span>2k</span>
                                     <p>satisfied clients</p>
                                 </div>
                             </div>
@@ -85,7 +128,7 @@
                         <div class="about-text">
                             <div class="section-title">
                                 <span class="title">about us</span>
-                                <h2 class="sub-title">we're cleaning since 2010</h2>
+                                <h2 class="sub-title">we're cleaning since 2020</h2>
                             </div>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis ipsam doloremque officiis iusto veritatis sunt at fuga, ipsum pariatur. Quidem!</p>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quas mollitia, repudiandae iusto cupiditate iste molestiae praesentium reiciendis molestias quisquam.</p>
@@ -103,6 +146,24 @@
                         <h2 class="sub-title">what we do</h2>
                     </div>
                     <div class="grid">
+                        <div class="services-item">
+                            <div class="img-box">
+                                <img src="{% static 'img/services/bedroom.jpeg' %}" alt="carpet">
+                            </div>
+                            <h3>bedroom cleaning</h3>
+                        </div>
+                        <div class="services-item">
+                            <div class="img-box">
+                                <img src="{% static 'img/services/building.jpeg' %}" alt="carpet">
+                            </div>
+                            <h3>building cleaning</h3>
+                        </div>
+                        <div class="services-item">
+                            <div class="img-box">
+                                <img src="{% static 'img/services/car.jpeg' %}" alt="carpet">
+                            </div>
+                            <h3>car cleaning</h3>
+                        </div>
                         <div class="services-item">
                             <div class="img-box">
                                 <img src="{% static 'img/services/house.jpg' %}" alt="carpet">
@@ -143,15 +204,16 @@
                         <div class="pricing-item">
                             <div class="pricing-header">
                                 <h3>basic</h3>
-                                <div class="price"><span>$299</span>monthly</div>
+                                <div class="price"><span>15,000</span>monthly</div>
                             </div>
                             <div class="pricing-body">
                                 <ul>
                                     <li><i class="fa fa-check"></i> window cleaning</li>
                                     <li><i class="fa fa-check"></i> carpet cleaning</li>
-                                    <li><i class="fa fa-times"></i> furniture cleaning</li>
+                                    <li><i class="fa fa-check"></i> furniture cleaning</li>
                                     <li><i class="fa fa-times"></i> car cleaning</li>
                                     <li><i class="fa fa-times"></i> bathroom cleaning</li>
+                                    <li><i class="fa fa-times"></i> bedroom cleaning</li>
                                 </ul>
                             </div>
                             <div class="pricing-footer">
@@ -161,7 +223,7 @@
                         <div class="pricing-item">
                             <div class="pricing-header">
                                 <h3>standard</h3>
-                                <div class="price"><span>$499</span>monthly</div>
+                                <div class="price"><span>20,000</span>monthly</div>
                             </div>
                             <div class="pricing-body">
                                 <ul>
@@ -170,6 +232,7 @@
                                     <li><i class="fa fa-check"></i> furniture cleaning</li>
                                     <li><i class="fa fa-check"></i> car cleaning</li>
                                     <li><i class="fa fa-times"></i> bathroom cleaning</li>
+                                    <li><i class="fa fa-times"></i> bedroom cleaning</li>
                                 </ul>
                             </div>
                             <div class="pricing-footer">
@@ -179,7 +242,7 @@
                         <div class="pricing-item">
                             <div class="pricing-header">
                                 <h3>premium</h3>
-                                <div class="price"><span>$899</span>monthly</div>
+                                <div class="price"><span>25,000</span>monthly</div>
                             </div>
                             <div class="pricing-body">
                                 <ul>
@@ -188,6 +251,7 @@
                                     <li><i class="fa fa-check"></i> furniture cleaning</li>
                                     <li><i class="fa fa-check"></i> car cleaning</li>
                                     <li><i class="fa fa-check"></i> bathroom cleaning</li>
+                                    <li><i class="fa fa-check"></i> bedroom cleaning</li>
                                 </ul>
                             </div>
                             <div class="pricing-footer">
@@ -199,7 +263,7 @@
             </section>
             <!-- pricing section end -->
 
-            <!-- team section start -->
+            <!-- team section start
             <section class="team section-padding" id="testimonials">
                 <div class="container">
                     <div class="section-title">
@@ -237,7 +301,7 @@
                     </div>
                 </div>
             </section>
-            <!-- team section end -->
+            team section end -->
 
             <!-- contact section start -->
             <section class="contact section-padding" id="contact">
@@ -251,17 +315,17 @@
                             <div class="contact-info-item">
                                 <i class="fas fa-map-marker-alt"></i>
                                 <h3>Address</h3>
-                                <p>Block-A, Sec-75, Sarita Vihar, New Delhi</p>
+                                <p>#0000, Dembel, Bole, Addis Ababa</p>
                             </div>
                             <div class="contact-info-item">
                                 <i class="fas fa-phone"></i>
                                 <h3>call us</h3>
-                                <p>91 9654 293 ***</p>
+                                <p>+251-936-******</p>
                             </div>
                             <div class="contact-info-item">
                                 <i class="fas fa-envelope"></i>
                                 <h3>Email us</h3>
-                                <p>info@gmail.com</p>
+                                <p>addis.cleaning@gmail.com</p>
                             </div>
                         </div>
                         <div class="contact-form">
