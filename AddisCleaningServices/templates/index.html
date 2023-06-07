@@ -17,38 +17,7 @@
         <!-- Page wrapper start -->
         <div class="page-wrapper">
             <!-- header section start -->
-            <header class="header js-header">
-                <div class="container">
-                    <div class="logo">
-                        <a href="#">addis <span>cleaning service</span></a>
-                    </div>
-                    <button type="button" class="nav-phone js-nav-phone">
-                        <i class="fa-solid fa-phone"></i> +251-936-******
-                    </button>
-                    <button type="button" class="nav-toggler js-nav-toggler">
-                        <span></span>
-                    </button>
-                    <nav class="nav js-nav">
-                        <ul>
-                            <li><a href="#home">home</a></li>
-                            <li><a href="#about">about us</a></li>
-                            <li><a href="#services">services</a></li>
-                            <li><a href="#pricing">pricing</a></li>
-                            <li><a href="#contact">contact</a></li>
-
-                            <li>
-                                <div class="style-switcher-item">
-                                    <label class="form-switch">
-                                        <span>Dark Mode</span>
-                                        <input type="checkbox" class="js-dark-mode">
-                                        <div class="box"></div>
-                                    </label>
-                                </div>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </header>
+            {% include 'partials/_headbar.html' %}
             <!-- header end-->
 
             <!-- home start -->
@@ -257,46 +226,6 @@
                 </div>
             </section>
             <!-- pricing section end -->
-
-            <!-- team section start
-            <section class="team section-padding" id="testimonials">
-                <div class="container">
-                    <div class="section-title">
-                        <span class="title">team</span>
-                        <h2 class="sub-title">meet our team</h2>
-                    </div>
-                </div>
-                <div class="grid">
-                    <div class="team-item">
-                        <div class="img-box">
-                            <img src="{% static 'img/team/1.png' %}" alt="img">
-                        </div>
-                        <div class="detail">
-                            <h3>john doe</h3>
-                            <p>team leader</p>
-                        </div>
-                    </div>
-                    <div class="team-item">
-                        <div class="img-box">
-                            <img src="{% static 'img/team/2.png' %}" alt="img">
-                        </div>
-                        <div class="detail">
-                            <h3>john doe</h3>
-                            <p>car cleaner</p>
-                        </div>
-                    </div>
-                    <div class="team-item">
-                        <div class="img-box">
-                            <img src="{% static 'img/team/3.png' %}" alt="img">
-                        </div>
-                        <div class="detail">
-                            <h3>john doe</h3>
-                            <p>cleaner</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            team section end -->
 
             <!-- contact section start -->
             <section class="contact section-padding" id="contact">
