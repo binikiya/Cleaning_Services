@@ -52,24 +52,7 @@
                             </div>
                         </div>
                         <div class="home-img">
-                            <form action="" method="post">
-                                <p>book your cleaners</p>
-                                <div class="input-box">
-                                    <input type="text" name="name" placeholder="Your Name" class="input-control" required />
-                                </div>
-                                <div class="input-box">
-                                    <input type="text" name="address" placeholder="Address" class="input-control" required />
-                                </div>
-                                <div class="input-box">
-                                    <input type="email" name="email" placeholder="Email" class="input-control" required />
-                                </div>
-                                <div class="input-box">
-                                    <input type="numeric" name="phone" placeholder="Phone" class="input-control" required />
-                                </div>
-                                <div class="btn-wrap">
-                                    <input type="button" class="btn" value="confirm booking">
-                                </div>
-                            </form>
+                            {% include 'authentication/register.html' %}
                         </div>
                     </div>
                 </div>

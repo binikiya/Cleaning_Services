@@ -1,3 +1,10 @@
 from django.db import models
+from django.utils import timezone
 
-# Create your models here.
+
+class Post(models.Model):
+    name = models.CharField(max_length=140, blank=False, null=False)
+    address = models.CharField(max_length=200, blank=False, null=False)
+    email = models.EmailField(max_length=100, blank=False, null=False)
+    phone = models.CharField(max_length=13, blank=False, null=False)
+    date = models.DateTimeField(default=timezone.now)
