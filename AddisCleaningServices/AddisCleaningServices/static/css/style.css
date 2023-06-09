@@ -285,6 +285,14 @@ textarea.input-control {
 .nav a:hover {
     border-bottom: 2px solid var(--main-color);
 }
+.nav .login {
+    padding: 5px 10px;
+    border: 1px solid #ff471a;
+    transition: all 0.3s ease;
+}
+.nav .login:hover {
+    border: 1px dotted #ff471a;
+}
 .nav-phone {
     margin-left: 30px;
     padding: 8px 15px;
