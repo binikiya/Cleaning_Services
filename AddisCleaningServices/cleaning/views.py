@@ -1,10 +1,8 @@
 from typing import Any
-from django import http
-from django.http import HttpResponse
 from django.shortcuts import render
 from django.views.generic import TemplateView
-from django.contrib.auth.models import User
 from .models import Post
+from django.shortcuts import redirect
 
 
 class HomePageView(TemplateView):
@@ -23,5 +21,6 @@ class HomePageView(TemplateView):
             phone = phone
         )
         user.save()
+        response = redirect('authentication:user')
 
-        return render(request, 'index.html')
+        return response
