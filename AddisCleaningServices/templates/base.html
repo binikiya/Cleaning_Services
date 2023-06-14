@@ -7,7 +7,7 @@
     <body>
         {% block body %}
         <div class="page-wrapper">
-            {% include 'partials/_headbar.html' %}
+            {% include 'partials/_headbar2.html' %}
 
             <section class="pricing section-padding" id="pricing">
                 <div class="container">
@@ -32,7 +32,7 @@
                                 </ul>
                             </div>
                             <div class="pricing-footer">
-                                <a href="{% url 'pricing:register' %}" class="btn">get started</a>
+                                <a href="{% url 'pricing:register' %}" value="15000" name="price" class="btn">get started</a>
                             </div>
                         </div>
                         <div class="pricing-item">
@@ -51,7 +51,7 @@
                                 </ul>
                             </div>
                             <div class="pricing-footer">
-                                <a href="{% url 'pricing:register' %}" class="btn">get started</a>
+                                <a href="{% url 'pricing:register' %}" value="15000" name="price" class="btn">get started</a>
                             </div>
                         </div>
                         <div class="pricing-item">
@@ -70,7 +70,7 @@
                                 </ul>
                             </div>
                             <div class="pricing-footer">
-                                <a href="{% url 'pricing:register' %}" class="btn">get started</a>
+                                <a href="{% url 'pricing:register' %}" value="15000" name="price" class="btn">get started</a>
                             </div>
                         </div>
                     </div>

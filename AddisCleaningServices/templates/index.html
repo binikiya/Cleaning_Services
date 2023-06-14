@@ -1,17 +1,19 @@
 {% load static %}
 {% load thumbnail %}
-<!DOCTYPE html>
+
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width initial-scale=1">
         <title> {% block title %}{% endblock title %} </title>
-        
+        {% block link %}
         <link href="{% static 'css/style.css' %}" rel="stylesheet">
         <link href="{% static 'css/style-switcher.css' %}" rel="stylesheet">
+        <link href="{% static 'css/register2.css' %}" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+        {% endblock %}
 
     </head>
     <body>
@@ -160,9 +162,9 @@
                                     <li><i class="fa fa-check"></i> window cleaning</li>
                                     <li><i class="fa fa-check"></i> carpet cleaning</li>
                                     <li><i class="fa fa-check"></i> furniture cleaning</li>
-                                    <li><i class="fa fa-times"></i> car cleaning</li>
-                                    <li><i class="fa fa-times"></i> bathroom cleaning</li>
-                                    <li><i class="fa fa-times"></i> bedroom cleaning</li>
+                                    <li><i class="fa fa-times" style="color: red;"></i> car cleaning</li>
+                                    <li><i class="fa fa-times" style="color: red;"></i> bathroom cleaning</li>
+                                    <li><i class="fa fa-times" style="color: red;"></i> bedroom cleaning</li>
                                 </ul>
                             </div>
                             <div class="pricing-footer">
@@ -180,8 +182,8 @@
                                     <li><i class="fa fa-check"></i> carpet cleaning</li>
                                     <li><i class="fa fa-check"></i> furniture cleaning</li>
                                     <li><i class="fa fa-check"></i> car cleaning</li>
-                                    <li><i class="fa fa-times"></i> bathroom cleaning</li>
-                                    <li><i class="fa fa-times"></i> bedroom cleaning</li>
+                                    <li><i class="fa fa-times" style="color: red;"></i> bathroom cleaning</li>
+                                    <li><i class="fa fa-times" style="color: red;"></i> bedroom cleaning</li>
                                 </ul>
                             </div>
                             <div class="pricing-footer">
@@ -240,19 +242,19 @@
                         <div class="contact-form">
                             <form>
                                 <div class="input-box">
-                                    <input type="text" placeholder="Name" class="input-control" required>
+                                    <input type="text" name="name1" id="nameField1" placeholder="Name" class="input-control" required />
                                 </div>
                                 <div class="input-box">
-                                    <input type="text" placeholder="Email" class="input-control" required>
+                                    <input type="text" name="email1" id="emailField1" placeholder="Email" class="input-control" required />
                                 </div>
                                 <div class="input-box">
-                                    <input type="text" placeholder="Phone" class="input-control" required>
+                                    <input type="text" name="phone1" id="phoneField1" placeholder="Phone" class="input-control" required />
                                 </div>
                                 <div class="input-box">
-                                    <textarea placeholder="Message" class="input-control" required></textarea>
+                                    <textarea name="message" id="messageField" placeholder="Message" class="input-control" required></textarea>
                                 </div>
                                 <div class="btn-wrap">
-                                    <button type="submit" class="btn">Send Message</button>
+                                    <button type="submit" class="btn submit-btn">Send Message</button>
                                 </div>
                             </form>
                         </div>
@@ -289,5 +291,6 @@
         <script src="{% static 'js/main.js' %}"></script>
         <script src="{% static 'js/login.js' %}"></script>
         <script src="{% static 'js/style-switcher.js' %}"></script>
+        <script src="{% static 'js/register.js' %}"></script>
     </body>
 </html>

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'sorl.thumbnail',
+    'phone_field',
 
     'authentication',
     'api',

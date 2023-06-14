@@ -540,7 +540,7 @@ textarea.input-control {
 .pricing-body li+li{
     padding-top: 10px;
 }
-.pricing-body li i {
+.pricing-body li i .fa-check {
     position: absolute;
     left: 0;
     margin-top: 5px;

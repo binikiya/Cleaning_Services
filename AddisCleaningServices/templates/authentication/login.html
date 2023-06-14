@@ -6,11 +6,16 @@
         <link href="{% static 'css/register.css' %}" rel="stylesheet">
         <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">
+
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+        <link href="{% static 'css/style-switcher.css' %}" rel="stylesheet">
         <title></title>
     </head>
     <body>
         {% block body %}
-        <a href="{% url 'cleaning:index' %}" class="back"> &larr; Back to home</a>
+        <div class="page-wrapper">
+            {% include 'partials/_headbar2.html' %}
+        </div><br><br><br><br>
         <div class="wrapper">
             <h2>Sign In</h2>
             <form method="post">
@@ -35,7 +40,10 @@
                     </div>
                 </div>
             </form>
-        </div>
+        </div><br><br><br><br>
+        {% include 'partials/_footbar.html' %}
+
+        <script src="{% static 'js/main.js' %}"></script>
         {% endblock %}
     </body>
 </html>

@@ -15,6 +15,7 @@ class Payment(models.Model):
     cvc = models.CharField(max_length=6, default=False, null=False)
     expiry = models.DateField()
     current = models.DateField(default=timezone.now)
+    price = models.BigIntegerField()
 
     def __str__(self):
         return self.name

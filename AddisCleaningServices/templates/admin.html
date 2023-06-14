@@ -1,1 +1,64 @@
-Your stuff here
+{% extends 'index.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        {% block link %}
+        <link href="{% static 'css/style.css' %}" rel="stylesheet">
+        <link href="{% static 'css/style-switcher.css' %}" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="{% static 'css/register.css' %}" class="css" />
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" >
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+        {% endblock %}
+    </head>
+    <body>
+        {% block body %}
+        <div class="page-wrapper">
+            {% include 'partials/_headbar2.html' %}
+        <br><br><br><br>
+        <div style="width: 80%; margin-left: 130px;">
+            <h2>New customers who completes their payment</h2>
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Card Type</th>
+                        <th scope="col">Service Type</th>
+                        <th scope="col">Paid</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for pays in payment %}
+                    <tr>
+                        <th scope="row">{{ i }}</th>
+                        <td>{{ pays.name }}</td>
+                        <td>{{ pays.email }}</td>
+                        <td>{{ pays.card }}</td>
+                        <td>
+                            {% if pays.price == 15000 %}Basic{% endif %}
+                            {% if pays.price == 20000 %}Standard{% endif%}
+                            {% if pays.price == 25000 %}Premium{% endif%}
+                        </td>
+                        <td>{{ pays.price }}</td>
+                        <td></td>
+                    </tr>
+                    
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div><br><br><br><br>
+        {% include 'partials/_footbar.html' %}
+
+        {% endblock %}
+        <script src="{% static 'js/main.js' %}"></script>
+    </body>
+</html>
